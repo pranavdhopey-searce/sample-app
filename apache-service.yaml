@@ -5,7 +5,6 @@ metadata:
   labels:
     app: apache
   name: apache
-  namespace: apache
 spec:
   ports:
   - port: 80
