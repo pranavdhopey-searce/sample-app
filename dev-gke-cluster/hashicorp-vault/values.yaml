@@ -3,7 +3,9 @@ server:
     enabled: true
     type: ClusterIP
     port: 8200
-    
+
 ui:
   enabled: true
-  serviceType: "ClusterIP"
+  serviceType: "LoadBalancer"
+  serviceNodePort: null
+  externalPort: 8200
