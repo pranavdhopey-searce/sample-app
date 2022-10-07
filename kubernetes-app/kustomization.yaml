@@ -1,0 +1,4 @@
+resources:
+- namespace.yaml
+- apache-deployment.yaml
+- apache-service.yaml
