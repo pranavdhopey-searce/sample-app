@@ -1,9 +1,3 @@
-server:
-  service:
-    enabled: true
-    type: ClusterIP
-    port: 8200
-
 ui:
   enabled: true
   serviceType: "LoadBalancer"
