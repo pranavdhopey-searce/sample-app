@@ -1,0 +1,7 @@
+helmCharts:
+# Remote cert manager chart
+- name: vault
+  repo: https://helm.releases.hashicorp.com
+  version: v0.22.0
+  releaseName: vault
+  namespace: vault-ns

@@ -1,0 +1,5 @@
+# GKE configuration & contraints
+resources:
+- rbac
+- constraints
+- hashicorp-vault
