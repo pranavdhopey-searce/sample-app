@@ -1,5 +1,0 @@
-# GKE configuration & contraints
-resources:
-- vcluster-deployment/
-- kubernetes-app/
-- dev-gke-cluster/
