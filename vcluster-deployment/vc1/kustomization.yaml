@@ -2,7 +2,7 @@ helmCharts:
 # Remote cert manager chart
 - name: vcluster
   repo: https://charts.loft.sh
-  version: v0.0.1
+  version: v0.12.1
   releaseName: vcluster
   namespace: vcluster-ns
   valuesFile: ./values.yaml
