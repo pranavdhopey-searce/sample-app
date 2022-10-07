@@ -12,6 +12,6 @@ service:
 
   # Optional configuration for LoadBalancer service type
   # Specify IP of load balancer to be created
-  loadBalancerIP: "34.107.213.57"
+  loadBalancerIP: ""
   # CIDR block(s) for the service allowlist
   loadBalancerSourceRanges: []
