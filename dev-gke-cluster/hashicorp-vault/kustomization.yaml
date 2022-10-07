@@ -5,3 +5,4 @@ helmCharts:
   version: v0.22.0
   releaseName: vault
   namespace: vault-ns
+  valuesFile: ./values.yaml
