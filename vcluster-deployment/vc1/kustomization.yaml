@@ -1,5 +1,5 @@
 helmCharts:
-# Remote cert manager chart
+# vcluster chart
 - name: vcluster
   repo: https://charts.loft.sh
   version: v0.12.1
