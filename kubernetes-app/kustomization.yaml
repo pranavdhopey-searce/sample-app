@@ -3,3 +3,4 @@ resources:
 - apache-deployment.yaml
 - apache-service.yaml
 - rbac/
+- constraints
