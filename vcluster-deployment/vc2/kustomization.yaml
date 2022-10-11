@@ -4,5 +4,5 @@ helmCharts:
   repo: https://charts.loft.sh
   version: v0.12.1
   releaseName: vcluster02
-  namespace: vcluster-ns
+  namespace: vcluster-ns-02
   valuesFile: ./values.yaml
