@@ -15,3 +15,8 @@ service:
   loadBalancerIP: ""
   # CIDR block(s) for the service allowlist
   loadBalancerSourceRanges: []
+
+sync:
+  nodes:
+    enabled: true
+    syncAllNodes: true
