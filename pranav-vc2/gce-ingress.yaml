@@ -1,0 +1,32 @@
+---
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: vc2-cert
+  namespace: team-b
+spec:
+  domains:
+    - vc2.goinit.net
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: pranav-global-ip
+    kubernetes.io/ingress.allow-http: "false"
+    networking.gke.io/managed-certificates: vc2-cert
+  name: vc2-gke-ingress
+  namespace: team-b
+spec:
+  rules:
+  - host: vc2.goinit.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: vc2
+            port: 
+              number: 443
+        path: /
+        pathType: ImplementationSpecific

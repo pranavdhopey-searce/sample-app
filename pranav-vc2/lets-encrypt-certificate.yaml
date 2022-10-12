@@ -1,0 +1,31 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-vc2
+  namespace: team-b
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: pranav.dhope@gmail.com    
+    privateKeySecretRef:
+      name: letsencrypt-vc2-key
+    solvers:
+    - http01: 
+       ingress:
+         class: nginx 
+
+---
+## Deploy LetsEncrypt Certificate ##
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-vc2-cert
+  namespace: team-b
+spec:
+  secretName: letsencrypt-vc2-secret
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-vc2
+  dnsNames:
+  - vc2.goinit.net

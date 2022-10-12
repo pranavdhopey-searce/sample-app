@@ -1,0 +1,31 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-vc1
+  namespace: team-a
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: pranav.dhope@gmail.com    
+    privateKeySecretRef:
+      name: letsencrypt-prod-key
+    solvers:
+    - http01: 
+       ingress:
+         class: nginx 
+
+---
+## Deploy LetsEncrypt Certificate ##
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-vc1-cert
+  namespace: team-a
+spec:
+  secretName: letsencrypt-vc1-secret
+  issuerRef:
+    kind: Issuer
+    name: letsencrypt-vc1
+  dnsNames:
+  - pranav-vc1.goinit.net

@@ -1,0 +1,4 @@
+syncer:
+  extraArgs:
+  - --tls-san=pranav-vc1.goinit.net
+  - --out-kube-config-server=https://pranav-vc1.goinit.net  
