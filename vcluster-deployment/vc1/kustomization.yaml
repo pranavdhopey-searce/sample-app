@@ -1,8 +1,5 @@
 helmCharts:
 # vcluster chart
 - name: vcluster
-  repo: https://charts.loft.sh
-  version: v0.12.1
-  releaseName: vcluster
+  releaseName: vcluster-01
   namespace: vcluster-ns
-  valuesFile: ./values.yaml

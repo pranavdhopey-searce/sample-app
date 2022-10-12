@@ -16,4 +16,4 @@ service:
   # CIDR block(s) for the service allowlist
   loadBalancerSourceRanges: []
 
-globalAnnotations: { cloud.google.com/load-balancer-type: internal }
+serviceAnnotations: cloud.google.com/load-balancer-type: internal 
