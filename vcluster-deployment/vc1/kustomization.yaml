@@ -1,5 +1,5 @@
 helmCharts:
 # vcluster chart
 - name: vcluster
-  releaseName: vcluster-01
+  releaseName: vcluster
   namespace: vcluster-ns
