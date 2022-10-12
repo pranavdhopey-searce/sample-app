@@ -1,4 +1,4 @@
 # GKE configuration & contraints
 resources:
-- vc1
+# - vc1
 - vc2
